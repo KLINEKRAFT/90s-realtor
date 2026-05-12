@@ -1,0 +1,6 @@
+# Friendly aliases
+/home   /         301
+/index  /         301
+/about  /#about   301
+/data   /#data    301
+/contact /#contact 301
