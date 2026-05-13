@@ -1,0 +1,405 @@
+/* ================================================== */
+/*  COLIN KLINE - TULSA REALTOR                       */
+/*  Site Design (C) 1996 ColinKline.com               */
+/*  Best Viewed at 800x600 in Netscape Navigator 4.0+ */
+/* ================================================== */
+
+body {
+    background-color: #008080;
+    background-image: url("assets/bg-tile.gif");
+    color: #000080;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tile a CSS-generated pattern so we don't ship a GIF */
+body {
+    background-image:
+        repeating-linear-gradient(45deg,
+            rgba(255,255,255,0.04) 0px,
+            rgba(255,255,255,0.04) 2px,
+            transparent 2px,
+            transparent 4px),
+        repeating-linear-gradient(-45deg,
+            rgba(0,0,0,0.05) 0px,
+            rgba(0,0,0,0.05) 2px,
+            transparent 2px,
+            transparent 4px);
+}
+
+table.page {
+    width: 760px;
+    margin: 10px auto;
+    background-color: #C0C0C0;
+    border: 4px ridge #808080;
+}
+
+td.banner {
+    background-color: #000080;
+    color: #FFFF00;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px groove #C0C0C0;
+}
+
+td.banner h1 {
+    font-family: "Comic Sans MS", "Brush Script MT", cursive;
+    color: #FFFF00;
+    font-size: 38px;
+    margin: 4px 0;
+    text-shadow: 2px 2px 0 #FF0000;
+    letter-spacing: 1px;
+}
+
+td.banner .sub {
+    color: #00FFFF;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+td.nav {
+    background-color: #800080;
+    color: #FFFF00;
+    text-align: center;
+    padding: 6px;
+    border-bottom: 3px groove #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+td.nav a {
+    color: #FFFF00;
+    text-decoration: none;
+    margin: 0 6px;
+    padding: 2px 6px;
+    border: 2px outset #C0C0C0;
+    background-color: #404080;
+    display: inline-block;
+}
+
+td.nav a:hover {
+    color: #FFFFFF;
+    background-color: #FF00FF;
+    border-style: inset;
+}
+
+td.nav a:visited {
+    color: #FFFF00;
+}
+
+td.content {
+    padding: 18px;
+    background-color: #FFFFCC;
+}
+
+td.sidebar {
+    width: 180px;
+    background-color: #E0E0FF;
+    padding: 12px;
+    vertical-align: top;
+    border-right: 3px groove #808080;
+    font-size: 12px;
+}
+
+td.footer {
+    background-color: #000080;
+    color: #C0C0C0;
+    text-align: center;
+    padding: 8px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    border-top: 3px groove #C0C0C0;
+}
+
+td.footer a {
+    color: #00FFFF;
+}
+
+/* HEADINGS */
+h2 {
+    color: #800000;
+    font-family: "Comic Sans MS", cursive;
+    border-bottom: 2px dashed #800000;
+    padding-bottom: 3px;
+}
+
+h3 {
+    color: #008000;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFF99;
+    padding: 3px 6px;
+    border-left: 6px solid #008000;
+}
+
+/* LINKS */
+a {
+    color: #0000EE;
+}
+a:visited {
+    color: #551A8B;
+}
+a:hover {
+    color: #FF0000;
+    background-color: #FFFF00;
+}
+
+/* BLINKING TEXT (the 90s classic) */
+.blink {
+    animation: blink 1.2s steps(2, start) infinite;
+    color: #FF0000;
+    font-weight: bold;
+}
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
+/* RAINBOW TEXT */
+.rainbow {
+    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+/* MARQUEE (CSS fallback in case the real <marquee> is dead) */
+.css-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #000000;
+    color: #00FF00;
+    font-family: "Courier New", monospace;
+    padding: 4px 0;
+    border: 2px inset #C0C0C0;
+}
+.css-marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 22s linear infinite;
+}
+@keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* SCANNED-PHOTO LOOK on the supplied JPGs */
+.scanned {
+    border: 6px ridge #FFFFFF;
+    padding: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 0 #404040;
+    filter: contrast(1.08) saturate(1.15);
+}
+
+.scanned-warm {
+    border: 6px ridge #FFFFFF;
+    padding: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 0 #404040;
+    filter: sepia(0.18) contrast(1.1) saturate(1.1) brightness(1.02);
+}
+
+/* PROPERTY CARDS */
+table.listing {
+    background-color: #FFFFFF;
+    border: 3px ridge #000080;
+    margin-bottom: 14px;
+    width: 100%;
+}
+table.listing td {
+    padding: 8px;
+    vertical-align: top;
+}
+table.listing td.photo-cell {
+    background-color: #000080;
+    text-align: center;
+    width: 220px;
+    color: #FFFF00;
+}
+table.listing .price {
+    color: #008000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive;
+}
+table.listing .mls {
+    font-family: "Courier New", monospace;
+    color: #800000;
+    font-weight: bold;
+}
+table.listing .status-sold {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 8px;
+    border: 2px outset #FF8080;
+    display: inline-block;
+    transform: rotate(-4deg);
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+table.listing .status-new {
+    background-color: #FFFF00;
+    color: #FF0000;
+    font-weight: bold;
+    padding: 2px 8px;
+    border: 2px outset #FFFFCC;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* HIT COUNTER */
+.hit-counter {
+    display: inline-block;
+    background-color: #000000;
+    color: #00FF00;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    padding: 4px 8px;
+    border: 3px inset #808080;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+/* AWARD BADGES */
+.badge {
+    display: inline-block;
+    width: 140px;
+    height: 60px;
+    margin: 4px;
+    text-align: center;
+    border: 3px outset #C0C0C0;
+    vertical-align: middle;
+    padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+.badge.gold   { background: linear-gradient(180deg, #FFD700, #B8860B); color: #4A2A00; }
+.badge.silver { background: linear-gradient(180deg, #E8E8E8, #909090); color: #000000; }
+.badge.blue   { background: linear-gradient(180deg, #4040A0, #000080); color: #FFFF00; }
+.badge.red    { background: linear-gradient(180deg, #C03030, #800000); color: #FFFFFF; }
+.badge.green  { background: linear-gradient(180deg, #40A040, #006000); color: #FFFFCC; }
+
+/* WEBRING / NETSCAPE NOW */
+.button88 {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    vertical-align: middle;
+    margin: 2px;
+    border: 1px solid #000000;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.05;
+    padding-top: 4px;
+    box-sizing: border-box;
+}
+.button88.netscape { background: linear-gradient(180deg, #003366, #000033); color: #FFFFFF; }
+.button88.ie       { background: linear-gradient(180deg, #0080FF, #003080); color: #FFFFFF; }
+.button88.geo      { background: linear-gradient(180deg, #006600, #003300); color: #FFFF00; }
+.button88.mls      { background: linear-gradient(180deg, #800000, #400000); color: #FFFFFF; }
+.button88.realtor  { background: linear-gradient(180deg, #003399, #001a4d); color: #FFFFFF; }
+
+/* CONSTRUCTION SIGN */
+.under-construction {
+    display: inline-block;
+    background: repeating-linear-gradient(
+        45deg,
+        #FFFF00 0 18px,
+        #000000 18px 36px
+    );
+    color: #000000;
+    padding: 6px 14px;
+    margin: 6px 0;
+    border: 3px outset #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.under-construction span {
+    background-color: #FFFF00;
+    padding: 2px 6px;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* HORIZONTAL RULES - 90s style */
+hr.fancy {
+    height: 4px;
+    border: 0;
+    background: linear-gradient(90deg, transparent, #FF0000, #FFFF00, #00FF00, #00FFFF, #FF00FF, transparent);
+    margin: 12px 0;
+}
+
+/* FORM (guestbook style) */
+form.guestbook {
+    background-color: #E0E0FF;
+    border: 3px ridge #000080;
+    padding: 12px;
+}
+form.guestbook input[type=text],
+form.guestbook input[type=email],
+form.guestbook textarea {
+    width: 100%;
+    border: 2px inset #808080;
+    font-family: "Courier New", monospace;
+    padding: 3px;
+    box-sizing: border-box;
+}
+form.guestbook input[type=submit] {
+    background-color: #C0C0C0;
+    border: 2px outset #FFFFFF;
+    padding: 4px 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+form.guestbook input[type=submit]:active {
+    border-style: inset;
+}
+
+/* INFO BOX */
+.info-box {
+    background-color: #FFFFFF;
+    border: 3px ridge #800000;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.testimonial {
+    background-color: #FFFFFF;
+    border-left: 6px double #800080;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-style: italic;
+    color: #303030;
+}
+.testimonial .by {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    color: #800080;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+/* AOL-style "new" flame */
+.new-flame {
+    color: #FF0000;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-color: #FFFF00;
+    padding: 0 4px;
+    border: 1px solid #FF0000;
+    font-size: 10px;
+    vertical-align: super;
+    animation: blink 1.4s steps(2, start) infinite;
+}
